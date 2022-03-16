@@ -1,0 +1,255 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+body{
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.root{
+    width: 100%;
+    height: 100vh;
+}
+
+.nav{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.logo h4{
+   margin: 0;
+   font-size: 2rem;
+   font-weight: bold;
+}
+.menu{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-btn{
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.login-btn{
+    border: 2px solid black;
+}
+.navbar{
+    position: absolute;
+    left: 50%;
+    transform: translateY(-1000px) translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    background-color: white;
+    z-index: 20;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    height: 100vh;
+    align-items: center;
+    font-size: 2rem;
+    
+    transition: all 250ms;
+}
+.nav-link{
+    margin-top: 2em;
+    color: black;
+    font-weight: 700;
+}
+.close{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    align-self: end;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+/* ----------------------
+    Main Section
+------------------------- */
+.container{
+    padding: 0 1.5em ;
+    display: flex;
+    height: calc(100vh - 75px);
+    position: relative;
+    width: 100%;
+}
+.title{
+    align-self: flex-end;
+    font-size: 3rem;
+    margin-left: 3em;
+    margin-bottom: 3em;
+    flex-basis: 50%;
+}
+.title-break{
+    display: block;
+    position: relative;
+    padding-left: 45px;
+}
+.title-break::before{
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 40px;
+    left: 0;
+    top: 35px;
+    background-color: black;
+}
+.pop{
+    position: absolute;    
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    padding: 0.25em 1em ;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    font-size: 0.7rem;
+    z-index: 10;
+}
+.link{
+    cursor: pointer;
+    padding: 0.5em 1.25em;
+    border-radius: 50px;
+}
+.light-link{
+    border: 2px solid black;
+
+}
+.cards{
+    flex-basis: 50%;
+}
+.card{
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1;
+}
+.card-title{
+    padding: 1em;
+    font-size: 2rem;
+}
+.card h4{
+    margin: 0;
+}
+.payment-received{
+    font-size: 0.8rem;
+    border-radius: 50px;
+    padding: 0.75em 2em;
+    position: absolute;
+    left: auto;
+    top: 100px;
+    right: -150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon{
+    display:flex;
+    padding: 2px 6px;
+    justify-content: center;
+    border: 1.5px solid;
+    border-radius: 50%;
+    width: 20px;
+    margin-right: 1em;
+}
+
+/*-----------------------
+    Earning section 
+------------------------*/
+
+.earning{
+    padding: 1em;
+    position: absolute;
+    left:-200px;
+    top: 150px;
+    font-size: 0.8rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
+}
+.graph{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 2em;
+}
+.earning-header{
+    display: flex;
+    align-items: center;
+}
+.earning-title{
+    font-size: 0.9rem;
+    color: gray;
+}
+.earning-title span{
+    display: block;
+    font-size: 1.2rem;
+    color: black;
+}
+.body{
+    font-size: 0.6rem;
+    display: flex;
+}
+.body span{
+    margin-right: 1.5em;
+}
+.body span:last-child{
+    margin-right: 0;
+}
+
+
+/* --------------------
+    Transfer section
+---------------------- */
+
+.transfer{
+    position: absolute;
+    top: 350px;
+    left: auto;
+    right: -150px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+.transfer-title{
+    padding: 1em;
+}
+.transfer-amt{
+    padding: 1em;
+    background-color: black;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.card-img{
+    max-width: 350px;
+}
